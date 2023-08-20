@@ -1,4 +1,5 @@
 #!/bin/bash
+git pull
 echo "Enter file name"
 read y
 echo "Enter commit"
