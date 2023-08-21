@@ -9,7 +9,6 @@
 int _printf(const char *format, ...)
 {
 	va_list arguments;
-	char *string_buffer;
 	int string_counter = 0, printed_counter = 0, function_counter = 0;
 	my_function my_print[] = {{"c", print_character}, {"s", print_string},
 	{"%", print_percent}, {NULL, NULL}};
