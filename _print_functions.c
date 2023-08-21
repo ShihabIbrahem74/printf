@@ -45,13 +45,11 @@ int print_percent(int printed_counter)
 }
 
 /**
- * print_integer - helafsfaf fa fa ffafafaf f afar awe faf aef afaf af fafaf
- *
- * @arguments: f af f agaefgafadfafaf f f af f fwefaf f aef faefwef f aef f
- *
- * @printed_counter: f af f agaefgafadfafaf f f af f fwefaf f aef faefwef
- *
- * Return: number of words
+ * print_integer - print integer
+ * Description: print an integer and send number of bytes written
+ * @arguments: a pointer to string
+ * @printed_counter: number of printed characters
+ * Return: number of printed integer
  */
 int print_integer(va_list arguments, int printed_counter)
 {
@@ -66,4 +64,3 @@ int print_integer(va_list arguments, int printed_counter)
 
 	return (printed_counter);
 }
-
