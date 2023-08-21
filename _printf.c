@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 				case 's':
 				string_buffer = va_arg(arguments, char *);
 				_puts(string_buffer);
-				printed_counter += _strlen(string_buffer);
+				printed_counter = _strlen(string_buffer);
 				break;
 				case '%':
 				_putchar('%');
