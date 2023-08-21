@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	va_list arguments;
 	char *string_buffer;
-	int string_counter = 0, printed_counter = 0;
+	int string_counter = 0, printed_counter = 0, number_buffer, r = 10;
 
 	va_start(arguments, format);
 	if (!format || (format[0] == '%' && !format[1]))
@@ -36,8 +36,8 @@ int _printf(const char *format, ...)
 				printed_counter++;
 				break;
 				case 'd':
-				number_buffer = va_arg(arguments, int *);
-				itoa(number_buffer, string_buffer, 10);
+				number_buffer = va_arg(arguments, int);
+				char * itoa(number_buffer, string_buffer, r);
 				_puts(string_buffer);
 				printed_counter += _strlen(string_buffer);
 				break;
