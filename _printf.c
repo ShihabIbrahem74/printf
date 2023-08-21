@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 				printed_counter = print_string(arguments, printed_counter);
 			else if (format[string_counter] == '%')
 				printed_counter = print_percent(printed_counter);
-			else if (format[string_counter] == 'd' || format[string_counter] == 'd')
+			else if (format[string_counter] == 'd' || format[string_counter] == 'i')
 				printed_counter = print_integer(arguments, printed_counter);
 		}
 		else
