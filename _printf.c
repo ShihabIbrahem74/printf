@@ -9,7 +9,6 @@
 int _printf(const char *format, ...)
 {
 	va_list arguments;
-	char *string_buffer;
 	int string_counter = 0, printed_counter = 0;
 
 	va_start(arguments, format);
@@ -20,6 +19,7 @@ int _printf(const char *format, ...)
 		if (format[string_counter] == '%')
 		{
 			string_counter++;
+<<<<<<< HEAD
 			switch (format[string_counter])
 			{
 				case 'c':
@@ -40,11 +40,19 @@ int _printf(const char *format, ...)
 				default:
 				return (-1);
 			}
+=======
+			if (format[string_counter] == 'c')
+				printed_counter = print_character(arguments, printed_counter);
+			else if (format[string_counter] == 's')
+				printed_counter = print_string(arguments, printed_counter);
+			else if (format[string_counter] == '%')
+				printed_counter = print_percent(printed_counter);
+>>>>>>> 629921611788505f3d96732f181b25ac23ce513d
 		}
 		else
 		{
-				_putchar(format[string_counter]);
-				printed_counter++;
+		    _putchar(format[string_counter]);
+		    printed_counter++;
 		}
 		string_counter++;
 	}
