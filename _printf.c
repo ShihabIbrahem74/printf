@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 				break;
 				case 's':
 				number_buffer = va_arg(arguments, int *);
-				itoa(number_buffer, string_buffer);
+				itoa(number_buffer, string_buffer, 10);
 				_puts(string_buffer);
 				printed_counter += _strlen(string_buffer);
 				break;
