@@ -10,7 +10,9 @@ int _printf(const char *format, ...)
 {
 	va_list arguments;
 	char *string_buffer;
-	int string_counter = 0, printed_counter = 0;
+	int string_counter = 0, printed_counter = 0, function_counter = 0;
+	my_function my_print[] = {{"c", print_character}, {"s", print_string},
+	{"%", print_percent}, {NULL, NULL}};
 
 	va_start(arguments, format);
 	if (!format || (format[0] == '%' && !format[1]))
@@ -20,24 +22,14 @@ int _printf(const char *format, ...)
 		if (format[string_counter] == '%')
 		{
 			string_counter++;
-			switch (format[string_counter])
+			function_counter = 0;
+			while (my_print[function_counter].specifier)
 			{
-				case 'c':
-				_putchar(va_arg(arguments, int));
-				printed_counter++;
-				break;
-				case 's':
-				string_buffer = va_arg(arguments, char *);
-				_puts(string_buffer);
-				printed_counter += _strlen(string_buffer);
-				break;
-				case '%':
-				_putchar('%');
-				printed_counter++;
-				break;
-				default:
-				return (-1);
+				if (format[string_counter] == my_print[function_counter].specifier[0])
+					printed_counter += my_print[function_counter].print_function(arguments);
+				function_counter++;
 			}
+			string_counter++;
 		}
 		else
 		{
