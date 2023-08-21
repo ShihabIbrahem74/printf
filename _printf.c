@@ -18,8 +18,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[string_counter] == '%')
 		{
-			if (_check_strings(format, arguments))
-			return (-1);
+			//if (_check_strings(format, arguments))
+			//return (-1);
 			string_counter++;
 			if (format[string_counter] == 'c')
 				printed_counter = print_character(arguments, printed_counter);
