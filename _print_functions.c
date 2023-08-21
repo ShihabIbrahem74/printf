@@ -25,6 +25,8 @@ int print_string(va_list arguments, int printed_counter)
 	char *string_buffer;
 
 	string_buffer = va_arg(arguments, char *);
+	if (!string_buffer)
+	string_buffer = "(null)";
 	_puts(string_buffer);
 	printed_counter += _strlen(string_buffer);
 	return (printed_counter);
