@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 			switch (format[string_counter])
 			{
 				case 'c':
-				_putchar(va_arg(arguments, int));
+				printf("%c", va_arg(arguments, int));
 				printed_counter++;
 				break;
 				case 's':
