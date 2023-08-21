@@ -20,29 +20,17 @@ int _printf(const char *format, ...)
 		if (format[string_counter] == '%')
 		{
 			string_counter++;
-			switch (format[string_counter])
-			{
-				case 'c':
-				_putchar(va_arg(arguments, int));
-				printed_counter++;
-				break;
-				case 's':
-				string_buffer = va_arg(arguments, char *);
-				_puts(string_buffer);
-				printed_counter += _strlen(string_buffer);
-				break;
-				case '%':
-				_putchar('%');
-				printed_counter++;
-				break;
-				default:
-				return (-1);
-			}
+			if (format[string_counter] == 'c')
+				printed_counter = print_character(arguments, printed_counter);
+			else if (format[string_counter] == 's')
+				printed_counter = print_string(arguments, printed_counter);
+			else if (format[string_counter] == '%')
+				printed_counter = print_percent(printed_counter);
 		}
 		else
 		{
-				_putchar(format[string_counter]);
-				printed_counter++;
+		    _putchar(format[string_counter]);
+		    printed_counter++;
 		}
 		string_counter++;
 	}
