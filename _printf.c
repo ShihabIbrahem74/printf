@@ -35,6 +35,12 @@ int _printf(const char *format, ...)
 				_putchar('%');
 				printed_counter++;
 				break;
+				case 's':
+				number_buffer = va_arg(arguments, int *);
+				itoa(number_buffer, string_buffer);
+				_puts(string_buffer);
+				printed_counter += _strlen(string_buffer);
+				break;
 				default:
 				return (-1);
 			}
