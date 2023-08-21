@@ -9,7 +9,6 @@
 int _printf(const char *format, ...)
 {
 	va_list arguments;
-	char *string_buffer;
 	int string_counter = 0, printed_counter = 0;
 
 	va_start(arguments, format);
