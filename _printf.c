@@ -35,6 +35,8 @@ int _printf(const char *format, ...)
 				_putchar('%');
 				printed_counter++;
 				break;
+				case 'd':
+
 				default:
 				return (-1);
 			}
