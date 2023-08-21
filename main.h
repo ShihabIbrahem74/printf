@@ -20,6 +20,6 @@ int _strlen(char *s);
 int print_character(va_list arguments, int printed_counter);
 int print_string(va_list arguments, int printed_counter);
 int print_percent(int printed_counter);
-
+int print_integer(va_list arguments, int printed_counter);
 
 #endif
