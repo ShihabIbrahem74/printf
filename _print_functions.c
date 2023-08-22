@@ -69,7 +69,7 @@ int print_integer(va_list arguments, int printed_counter)
 /**
  * print_binary - print binary
  * Description: handle the custom specifer p
- * @arguments: f af f agaefgafadfafaf f f af f fwefaf f aef faefwef f aef f
+ * @arguments: a pointer to string
  * @printed_counter: f af f agaefgafadfafaf f f af f fwefaf f aef faefwef
  *
  * Return: number of words
