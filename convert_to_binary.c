@@ -8,7 +8,7 @@
  * Return: number of words
  */
 
-int convert_binery(int dec)
+int convert_binery(unsigned int dec)
 {
 	int count = 0, mod = 0, ret = 0, result = 1, exponent;
 
