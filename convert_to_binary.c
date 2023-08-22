@@ -11,14 +11,18 @@
  */
 int convert_binery(int dec)
 {
-	int count = 0, mod = 0, ret = 0, power;
+	int count = 0, mod = 0, ret = 0, power, result = 1, exponent;
 
 	while (dec > 0)
 	{
 		mod = dec % 2;
 		dec = dec / 2;
-		power = pow(10, count);
-		ret += (mod * power);
+		for (exponent = count; exponent > 0; exponent--)
+		{
+			result = result * 10;
+		}
+		ret += (mod * result);
+		result = 1;
 		count++;
 		if (dec == 0)
 		{
