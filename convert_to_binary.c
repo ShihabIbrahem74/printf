@@ -27,6 +27,6 @@ int convert_binery(int dec)
 	*}
 	*return (return_fun);
 	*/
-	return (0);
+	return (dec);
 }
 
