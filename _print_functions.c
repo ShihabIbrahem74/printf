@@ -78,7 +78,7 @@ int print_integer(va_list arguments, int printed_counter)
 
 int print_binary(va_list arguments, int printed_counter)
 {
-	unsigned int converted, number_buffer;
+	unsigned long converted, number_buffer;
 	char *string_buffer;
 
 	number_buffer = va_arg(arguments, int);
