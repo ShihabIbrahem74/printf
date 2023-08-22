@@ -22,7 +22,11 @@ int print_percent(int printed_counter);
 int print_integer(va_list arguments, int printed_counter);
 int print_binary(va_list arguments, int printed_counter);
 
+/* BASE PRINT FUNCTIONS*/
+int b_se(va_list arguments, int printed_counter, char base_index);
+
 /* CONVERTERS */
 char *binary_converter(unsigned int bin_num);
+int print_unsignedint(va_list arguments, int printed_counter);
 
 #endif
