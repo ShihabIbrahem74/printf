@@ -10,10 +10,12 @@
 
 int print_binary(va_list arguments, int printed_counter)
 {
-	unsigned long converted, number_buffer;
+	long converted, number_buffer;
 	char *string_buffer;
 
 	number_buffer = va_arg(arguments, int);
+	if (number_buffer < 0)
+	return (-1);
 	converted = convert_binery(number_buffer);
 	string_buffer = malloc(11 * sizeof(char));
 	sprintf(string_buffer, "%ld", converted);

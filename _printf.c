@@ -30,7 +30,11 @@ int _printf(const char *format, ...)
 			else if (format[string_counter] == 'd' || format[string_counter] == 'i')
 				printed_counter = print_integer(arguments, printed_counter);
 			else if (format[string_counter] == 'b')
+				{
 				printed_counter = print_binary(arguments, printed_counter);
+				if (printed_counter == -1)
+				return (-1);
+				}
 		}
 		else
 		{
