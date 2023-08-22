@@ -67,7 +67,7 @@ int print_integer(va_list arguments, int printed_counter)
 	return (printed_counter);
 }
 /**
- * print_binary - helafsfaf fa fa ffafafaf f afar awe faf aef afaf af fafaf
+ * print_binary - print binary
  *
  * @arguments: f af f agaefgafadfafaf f f af f fwefaf f aef faefwef f aef f
  *
