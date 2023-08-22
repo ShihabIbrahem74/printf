@@ -11,22 +11,20 @@
  */
 int convert_binery(int dec)
 {
-	/**
-	*int count = 0, mod = 0, return_fun = 0;
-	*
-	*while (dec > 0)
-	*{
-	*	mod = dec % 2;
-	*	dec = dec / 2;
-	*	return_fun += (mod * pow(10, count));
-	*	count++;
-	*	if (dec == 0)
-	*	{
-	*		break;
-	*	}
-	*}
-	*return (return_fun);
-	*/
-	return (dec);
+	int count = 0, mod = 0, ret = 0, power;
+
+	while (dec > 0)
+	{
+		mod = dec % 2;
+		dec = dec / 2;
+		power = pow(10, count);
+		ret += (mod * power);
+		count++;
+		if (dec == 0)
+		{
+			break;
+		}
+	}
+	return (ret);
 }
 
