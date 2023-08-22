@@ -16,7 +16,7 @@ int print_binary(va_list arguments, int printed_counter)
 	number_buffer = va_arg(arguments, int);
 	converted = convert_binery(number_buffer);
 	string_buffer = malloc(11 * sizeof(char));
-	sprintf(string_buffer, "%d", converted);
+	sprintf(string_buffer, "%ld", converted);
 	_puts(string_buffer);
 	printed_counter += _strlen(string_buffer);
 
