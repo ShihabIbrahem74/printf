@@ -11,7 +11,7 @@
  */
 int convert_binery(int dec)
 {
-	int count = 0, mod = 0, ret = 0, power, result = 1, exponent;
+	int count = 0, mod = 0, ret = 0, result = 1, exponent;
 
 	while (dec > 0)
 	{
