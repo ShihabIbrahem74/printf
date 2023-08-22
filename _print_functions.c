@@ -74,20 +74,19 @@ int print_integer(va_list arguments, int printed_counter)
  * @printed_counter: f af f agaefgafadfafaf f f af f fwefaf f aef faefwef
  *
  * Return: number of words
- *
- *
- *int print_binary(va_list arguments, int printed_counter)
- *{
- *	int number_buffer, converted;
- *	char *string_buffer;
- *
- *	number_buffer = va_arg(arguments, int);
- *	converted = convert_binery(number_buffer);
- *	string_buffer = malloc(11 * sizeof(char));
- *	sprintf(string_buffer, "%d", converted);
- *	_puts(string_buffer);
- *	printed_counter += _strlen(string_buffer);
- *
- *	return (printed_counter);
- *}
  */
+
+int print_binary(va_list arguments, int printed_counter)
+{
+	int number_buffer, converted;
+	char *string_buffer;
+
+	number_buffer = va_arg(arguments, int);
+	converted = convert_binery(number_buffer);
+	string_buffer = malloc(11 * sizeof(char));
+	sprintf(string_buffer, "%d", converted);
+	_puts(string_buffer);
+	printed_counter += _strlen(string_buffer);
+
+	return (printed_counter);
+}
