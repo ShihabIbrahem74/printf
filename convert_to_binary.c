@@ -11,6 +11,7 @@ unsigned long convert_binery(unsigned int dec)
 {
 	int count = 0, mod = 0, result = 1, exponent;
 	unsigned long ret = 0;
+
 	while (dec > 0)
 	{
 		mod = dec % 2;
