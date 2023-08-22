@@ -10,15 +10,15 @@
 
 int print_binary(va_list arguments, int printed_counter)
 {
-	unsigned long converted, number_buffer;
+	unsigned int buffer;
 	char *string_buffer;
 
-	number_buffer = va_arg(arguments, int);
-	converted = convert_binery(number_buffer);
-	string_buffer = malloc(11 * sizeof(char));
-	sprintf(string_buffer, "%ld", converted);
-	_puts(string_buffer);
-	printed_counter += _strlen(string_buffer);
-
+	buffer = va_arg(arguments, unsigned int);
+	string_buffer = binary_converter(buffer);
+	while (*string_buffer != '\0')
+	{
+	printed_counter += _printf("%c", *string_buffer);
+	string_buffer--;
+	}
 	return (printed_counter);
 }
