@@ -1,5 +1,5 @@
 #include "main.h"
-#define specifires_num  6
+#define specifires_num  7
 /**
  * _check_strings - calulate the length of string
  * Description: it calulate the string passed to _puts
@@ -9,7 +9,7 @@
 int _check_strings(const char *chk_format, ...)
 {
 	va_list chk_arguments;
-	char chk_specifiers[specifires_num] = {'c', 's', '%', 'd', 'i', 'b'};
+	char chk_specifiers[specifires_num] = {'c', 's', '%', 'd', 'i', 'b', 'r'};
 	int string_counter = 0, array_counter = 0, flag;
 
 	va_start(chk_arguments, chk_format);

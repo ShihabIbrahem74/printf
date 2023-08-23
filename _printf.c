@@ -31,6 +31,8 @@ int _printf(const char *format, ...)
 				printed_counter = print_integer(arguments, printed_counter);
 			else if (format[string_counter] == 'b')
 				printed_counter = print_binary(arguments, printed_counter);
+			else if (format[string_counter] == 'r')
+				printed_counter = reverse_string(arguments, printed_counter);
 		}
 		else
 		{
