@@ -1,11 +1,9 @@
 #include "main.h"
 /**
- * reverse_string - helafsfaf fa fa ffafafaf f afar awe faf aef afaf af fafaf
- *
- * @arguments: f af f agaefgafadfafaf f f af f fwefaf f aef faefwef f aef f
- *
- * @reverse_string: f af f agaefgafadfafaf f f af f fwefaf f aef faefwef
- *
+ * reverse_string - print a string
+ * Description: prints a string in reverse
+ * @arguments: a pointer to string
+ * @reverse_string: number of printed characters
  * Return: number of words
  */
 int reverse_string(va_list arguments, int printed_counter)
