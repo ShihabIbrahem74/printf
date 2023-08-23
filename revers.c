@@ -8,17 +8,16 @@
  */
 int reverse_string(va_list arguments, int printed_counter)
 {
-        char *string_buffer;
-        int len;
-        string_buffer = va_arg(arguments, char *);
-        len = _strlen(string_buffer);
-        len--;
-        printed_counter+= len;
-        while (len != -1)
-        {
-            _putchar(string_buffer[len]);
-            len--;
+	char *string_buffer;
+	int len;
+	string_buffer = va_arg(arguments, char *);
+	len = _strlen(string_buffer);
+	len--;
+	printed_counter+= len;
+	while (len != -1)
+	{
+		_putchar(string_buffer[len]);
+		len--;
 	}
 	return (printed_counter);
-
 }
