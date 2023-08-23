@@ -16,8 +16,6 @@ int _printf(const char *format, ...)
 	return (-1);
 	while (format[string_counter])
 	{
-		if (_check_strings(format, arguments))
-		return (-1);
 		if (format[string_counter] == '%')
 		{
 			string_counter++;
@@ -36,6 +34,9 @@ int _printf(const char *format, ...)
 			else if (format[string_counter] == 'u' || format[string_counter] == 'o'
 			|| format[string_counter] == 'x' || format[string_counter] == 'X')
 				printed_counter = b_se(arguments, printed_counter, format[string_counter]);
+			else
+			printed_counter += print_unknown(format[string_counter - 1],
+			format[string_counter], printed_counter);
 		}
 		else
 		{

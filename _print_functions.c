@@ -47,6 +47,22 @@ int print_percent(int printed_counter)
 }
 
 /**
+ * print_unknown - print unknown specifier
+ * Description: if an unknown specifier comes after % it will print it
+ * @a: to print %
+ * @b: to print unknown specifier
+ * @printed_counter: number of printed characters
+ * Return: number of printed characters
+*/
+int print_unknown(char a, char b, int printed_counter)
+{
+	_putchar(a);
+	_putchar(b);
+	printed_counter += 2;
+	return (printed_counter);
+}
+
+/**
  * print_integer - print integer
  * Description: print an integer and send number of bytes written
  * @arguments: a pointer to string
