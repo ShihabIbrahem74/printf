@@ -3,7 +3,7 @@
  * reverse_string - print a string
  * Description: prints a string in reverse
  * @arguments: a pointer to string
- * @reverse_string: number of printed characters
+ * @printed_counter: number of printed characters
  * Return: number of words
  */
 int reverse_string(va_list arguments, int printed_counter)
