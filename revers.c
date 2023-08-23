@@ -12,18 +12,14 @@ int reverse_string(va_list arguments, int printed_counter)
 	int length;
 
 	string_buffer = va_arg(arguments, char *);
-	if (string_buffer != NULL)
-	{
-		string_buffer = "";
-		return (-1);
-	}
 	length = _strlen(string_buffer);
-	length--;
 	printed_counter += length;
+	length--;
+
 	while (length != -1)
 	{
 		_putchar(string_buffer[length]);
 		length--;
 	}
-	return (printed_counter + 1);
+	return (printed_counter);
 }
