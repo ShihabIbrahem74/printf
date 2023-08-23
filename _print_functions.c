@@ -76,9 +76,12 @@ int print_integer(va_list arguments, int printed_counter)
 
 	number_buffer = va_arg(arguments, int);
 	string_buffer = malloc(11 * sizeof(char));
+	if (string_buffer)
+	{
 	sprintf(string_buffer, "%d", number_buffer);
 	_puts(string_buffer);
 	printed_counter += _strlen(string_buffer);
-
+	}
+	free(string_buffer);
 	return (printed_counter);
 }
