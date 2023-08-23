@@ -42,14 +42,14 @@ int print_unsignedint(va_list arguments, int printed_counter)
 	unsigned int number_buffer;
 	char *string_buffer;
 
-	number_buffer = va_arg(arguments, int);
+	number_buffer = va_arg(arguments, unsigned int);
 	if (number_buffer == '\0')
 	{
 		printed_counter += _printf("0");
 		return (printed_counter);
 	}
 	string_buffer = malloc(11 * sizeof(char));
-	sprintf(string_buffer, "%d", number_buffer);
+	sprintf(string_buffer, "%u", number_buffer);
 	_puts(string_buffer);
 	printed_counter += _strlen(string_buffer);
 
