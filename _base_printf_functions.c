@@ -17,7 +17,7 @@ int b_se(va_list arguments, int printed_counter, char base_index)
 		printed_counter = print_unsignedint(arguments, printed_counter);
 		break;
 		case 'o':
-		printed_counter = print_unsignedint(arguments, printed_counter);
+		printed_counter = print_octal(arguments, printed_counter);
 		break;
 		case 'x':
 		printed_counter = print_lowerHex(arguments, printed_counter);

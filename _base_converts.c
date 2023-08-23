@@ -61,8 +61,8 @@ unsigned int converted_counter = 1;
 converted[0] = '\0';
 while (hex_num != 0)
 {
-	converted[converted_counter] = hex_array[hex_num % 8];
-	hex_num = hex_num / 8;
+	converted[converted_counter] = hex_array[hex_num % 16];
+	hex_num = hex_num / 16;
 	converted_counter++;
 }
 converted_addres = &converted[converted_counter - 1];
@@ -85,8 +85,8 @@ unsigned int converted_counter = 1;
 converted[0] = '\0';
 while (hex_num != 0)
 {
-	converted[converted_counter] = hex_array[hex_num % 8];
-	hex_num = hex_num / 8;
+	converted[converted_counter] = hex_array[hex_num % 16];
+	hex_num = hex_num / 16;
 	converted_counter++;
 }
 converted_addres = &converted[converted_counter - 1];
