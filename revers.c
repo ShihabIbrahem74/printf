@@ -14,7 +14,7 @@ int reverse_string(va_list arguments, int printed_counter)
 	string_buffer = va_arg(arguments, char *);
 	length = _strlen(string_buffer);
 	length--;
-	printed_counter+= length;
+	printed_counter += length;
 	while (length != -1)
 	{
 		_putchar(string_buffer[length]);
