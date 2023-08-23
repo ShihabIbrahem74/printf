@@ -14,6 +14,8 @@ int print_binary(va_list arguments, int printed_counter)
 	char *string_buffer;
 
 	buffer = va_arg(arguments, unsigned int);
+	if (buffer == 0)
+	return (printed_counter += _printf("%c", '0'));
 	string_buffer = binary_converter(buffer);
 	while (*string_buffer != '\0')
 	{
