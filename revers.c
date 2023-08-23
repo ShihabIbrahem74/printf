@@ -12,6 +12,11 @@ int reverse_string(va_list arguments, int printed_counter)
 	int length;
 
 	string_buffer = va_arg(arguments, char *);
+	if (string_buffer != NULL)
+	{
+		string_buffer = "";
+		return (-1);
+	}
 	length = _strlen(string_buffer);
 	length--;
 	printed_counter += length;
