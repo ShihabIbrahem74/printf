@@ -70,7 +70,7 @@ return (converted_addres);
 }
 
 /**
- * hexLow_converter - convert to hex
+ * hexUpper_converter - convert to hex
  * Description: convert unsigned int to hex string
  * @hex_num: number to convert
  * Return: array of characters
