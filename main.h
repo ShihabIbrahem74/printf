@@ -24,9 +24,16 @@ int print_binary(va_list arguments, int printed_counter);
 
 /* BASE PRINT FUNCTIONS*/
 int b_se(va_list arguments, int printed_counter, char base_index);
+int print_unsignedint(va_list arguments, int printed_counter);
+int print_octal(va_list arguments, int printed_counter);
+int print_lowerHex(va_list arguments, int printed_counter);
+int print_upperHex(va_list arguments, int printed_counter);
 
 /* CONVERTERS */
 char *binary_converter(unsigned int bin_num);
-int print_unsignedint(va_list arguments, int printed_counter);
+char *octal_converter(unsigned int bin_num);
+char *hexLow_converter(unsigned int bin_num);
+char *hexUpper_converter(unsigned int bin_num);
+
 
 #endif
