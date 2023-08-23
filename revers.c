@@ -18,6 +18,7 @@ char *rev_string(char *c)
         c[i] = c[len - i - 1];
         c[len - i - 1] = temp;
     }
+    return (c);
     
 }
 /**
