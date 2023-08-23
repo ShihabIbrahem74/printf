@@ -25,7 +25,6 @@ int print_integer(va_list arguments, int printed_counter);
 int print_binary(va_list arguments, int printed_counter);
 int reverse_string(va_list arguments, int printed_counter);
 int print_unknown(char a, char b, int printed_counter);
-int _putchar_new(char a, int printed_counter);
 
 /* BASE PRINT FUNCTIONS*/
 int b_se(va_list arguments, int printed_counter, char base_index);
