@@ -39,10 +39,7 @@ int _printf(const char *format, ...)
 			format[string_counter], printed_counter);
 		}
 		else
-		{
-			_putchar(format[string_counter]);
-			printed_counter++;
-		}
+			printed_counter += _putchar_new(format[string_counter], printed_counter);
 		string_counter++;
 	}
 	va_end(arguments);

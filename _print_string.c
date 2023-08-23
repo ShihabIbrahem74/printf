@@ -31,3 +31,18 @@ void _puts(char *str)
 		counter_string++;
 	}
 }
+
+/**
+ * _putchar_new - print character
+ * Description: print a single character and send number of bytes written
+ * @a: a signle char
+ * @printed_counter: number of characters written
+ * Return: 1 on sucess
+*/
+
+int _putchar_new(char a, int printed_counter)
+{
+	_putchar(a);
+	printed_counter++;
+	return (printed_counter);
+}
