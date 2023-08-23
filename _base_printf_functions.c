@@ -49,10 +49,13 @@ int print_unsignedint(va_list arguments, int printed_counter)
 		return (printed_counter);
 	}
 	string_buffer = malloc(11 * sizeof(char));
+	if (string_buffer)
+	{
 	sprintf(string_buffer, "%u", number_buffer);
 	_puts(string_buffer);
 	printed_counter += _strlen(string_buffer);
-
+	}
+	free(string_buffer);
 	return (printed_counter);
 }
 
