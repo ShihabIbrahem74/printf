@@ -25,5 +25,5 @@ int reverse_string(va_list arguments, int printed_counter)
 		_putchar(string_buffer[length]);
 		length--;
 	}
-	return (printed_counter);
+	return (printed_counter + 1);
 }
