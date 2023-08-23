@@ -9,15 +9,16 @@
 int reverse_string(va_list arguments, int printed_counter)
 {
 	char *string_buffer;
-	int len;
+	int length;
+
 	string_buffer = va_arg(arguments, char *);
-	len = _strlen(string_buffer);
-	len--;
-	printed_counter+= len;
-	while (len != -1)
+	length = _strlen(string_buffer);
+	length--;
+	printed_counter+= length;
+	while (length != -1)
 	{
-		_putchar(string_buffer[len]);
-		len--;
+		_putchar(string_buffer[length]);
+		length--;
 	}
 	return (printed_counter);
 }
