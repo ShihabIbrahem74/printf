@@ -43,6 +43,11 @@ int print_unsignedint(va_list arguments, int printed_counter)
 	char *string_buffer;
 
 	number_buffer = va_arg(arguments, int);
+	if (number_buffer == '\0')
+	{
+	    printed_counter += _printf("0");
+	    return (printed_counter);
+	}
 	string_buffer = malloc(11 * sizeof(char));
 	sprintf(string_buffer, "%d", number_buffer);
 	_puts(string_buffer);
@@ -65,6 +70,11 @@ int print_octal(va_list arguments, int printed_counter)
 	char *string_buffer;
 
 	buffer = va_arg(arguments, unsigned int);
+	if (buffer == '\0')
+	{
+	    printed_counter += _printf("0");
+	    return (printed_counter);
+	}
 	string_buffer = octal_converter(buffer);
 	while (*string_buffer != '\0')
 	{
@@ -88,6 +98,11 @@ int print_lowerHex(va_list arguments, int printed_counter)
 	char *string_buffer;
 
 	buffer = va_arg(arguments, unsigned int);
+	if (buffer == '\0')
+	{
+	    printed_counter += _printf("0");
+	    return (printed_counter);
+	}
 	string_buffer = hexLow_converter(buffer);
 	while (*string_buffer != '\0')
 	{
@@ -111,6 +126,11 @@ int print_upperHex(va_list arguments, int printed_counter)
 	char *string_buffer;
 
 	buffer = va_arg(arguments, unsigned int);
+	if (buffer == '\0')
+	{
+	    printed_counter += _printf("0");
+	    return (printed_counter);
+	}
 	string_buffer = hexUpper_converter(buffer);
 	while (*string_buffer != '\0')
 	{
